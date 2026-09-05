@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #eef1f5;
+  color: #10192b;
+}
+
+/* Visible, consistent keyboard focus ring across all interactive elements. */
+:focus-visible {
+  outline: 2px solid #d9a441;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Corner-bracket treatment used by the blueprint-style spec cards. */
+.corner-bracket {
+  position: relative;
+}
+
+.corner-bracket::before,
+.corner-bracket::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #d9a441;
+  pointer-events: none;
+}
+
+.corner-bracket::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #d9a441;
+  border-left: 2px solid #d9a441;
+}
+
+.corner-bracket::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #d9a441;
+  border-right: 2px solid #d9a441;
+}
